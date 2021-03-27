@@ -322,7 +322,7 @@ $sidebar-variants-map: map-merge(
   $sidebar-variants-map
 );
 
-$sidebar-default-variant: "light" !default;
+$sidebar-default-variant: "dark" !default;
 $sidebar-variants: (
   map: $sidebar-variants-map,
   default: $sidebar-default-variant
