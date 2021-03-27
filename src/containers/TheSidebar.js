@@ -19,11 +19,11 @@ const TheSidebar = () => {
 
   return (
     <CSidebar
+      colorScheme={'light'}
       show={show}
       onShowChange={(val) => dispatch({type: 'set', sidebarShow: val })}
     >
-      <CSidebarNav>
-
+      <CSidebarNav >
         <CCreateElement
           items={navigation}
           components={{
