@@ -9,7 +9,8 @@ import {
   CHeaderNavLink,
   CSubheader,
   CBreadcrumbRouter,
-  CLink
+  CLink,
+  CButton
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 
@@ -49,26 +50,22 @@ const TheHeader = () => {
         className="ml-3 d-md-down-none"
         onClick={toggleSidebar}
       />
-      <CHeaderBrand className="mx-auto d-lg-none" to="/">
-        <CIcon name="logo" height="48" alt="Logo"/>
-      </CHeaderBrand>
 
       <CHeaderNav className="d-md-down-none mr-auto">
         <CHeaderNavItem className="px-3" >
-          <CHeaderNavLink to="/dashboard">Dashboard</CHeaderNavLink>
+          <CHeaderNavLink to="/dashboard">파스토셀프</CHeaderNavLink>
         </CHeaderNavItem>
-        <CHeaderNavItem  className="px-3">
-          <CHeaderNavLink to="/users">Users</CHeaderNavLink>
-        </CHeaderNavItem>
-        <CHeaderNavItem className="px-3">
-          <CHeaderNavLink>Settings</CHeaderNavLink>
-        </CHeaderNavItem>
+        <a href="#" className="text-white">[시스템] 네이버페이 전산시스템 작업으로 인한 서비스 점검 안내</a>
       </CHeaderNav>
-
-      <CHeaderNav className="px-3">
+      
+      <CHeaderNav className="px-3 ml-auto">
+        <CHeaderNavItem  className="px-3">
+          <CButton block variant="outline" to="/users" color="light">N스토어 연동</CButton>
+        </CHeaderNavItem>   
+        <CHeaderNavItem  className="px-3">
+          <CHeaderNavLink><CIcon name="cil-credit-card"/></CHeaderNavLink>
+        </CHeaderNavItem>  
         <TheHeaderDropdownNotif/>
-        <TheHeaderDropdownTasks/>
-        <TheHeaderDropdownMssg/>
         <TheHeaderDropdown/>
       </CHeaderNav>
 

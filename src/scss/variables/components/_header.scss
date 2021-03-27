@@ -26,8 +26,8 @@ $header-toggler-font-size:      $font-size-lg !default;
 $header-toggler-border:         0 !default;
 $header-toggler-border-radius:  $btn-border-radius !default;
 
-$header-light-bg:                     $white !default;
-$header-light-color:                  rgba($black, .5) !default;
+$header-light-bg:                     $brand !default;
+$header-light-color:                  $white !default;
 $header-light-border:                 ( bottom: 1px solid $border-color ) !default;
 $header-light-hover-color:            rgba($black, .7) !default;
 $header-light-active-color:           rgba($black, .9) !default;

@@ -6,6 +6,9 @@ import {
 } from 'react-router-dom'
 import { CContainer, CFade } from '@coreui/react'
 
+// Component
+import AppRoute from './../utils/AppRoute';
+
 // routes config
 import routes from '../routes'
   
@@ -18,27 +21,21 @@ const loading = (
 const TheContent = () => {
   return (
     <main className="c-main">
-      <CContainer fluid>
         <Suspense fallback={loading}>
           <Switch>
             {routes.map((route, idx) => {
               return route.component && (
-                <Route
+                <AppRoute 
                   key={idx}
                   path={route.path}
                   exact={route.exact}
-                  name={route.name}
-                  render={props => (
-                    <CFade>
-                      <route.component {...props} />
-                    </CFade>
-                  )} />
+                  layout={route.layout}
+                />
               )
             })}
             <Redirect from="/" to="/dashboard" />
           </Switch>
         </Suspense>
-      </CContainer>
     </main>
   )
 }

@@ -169,7 +169,7 @@
 
 @include themes($header-theme-map, $create: append, $parent: ".c-header") {
   background: themes-get-value("header-bg");
-  @include borders(themes-get-value("header-border"));
+  // @include borders(themes-get-value("header-border"));
 
   .c-subheader {
     margin-top: -1px;
