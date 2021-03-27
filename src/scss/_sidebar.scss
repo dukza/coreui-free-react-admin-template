@@ -11,7 +11,7 @@
   width: $sidebar-width;
   padding: $sidebar-padding;
   box-shadow: none;
-
+  
   &.c-sidebar-right {
     order: 99;
   }
@@ -92,7 +92,7 @@
   &.c-sidebar-fixed {
     @include media-breakpoint-up($mobile-breakpoint) {
       position: fixed;
-      top: 0;
+      top: $header-height;
       bottom: 0;
       z-index: $zindex-fixed;
 
