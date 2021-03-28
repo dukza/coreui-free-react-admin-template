@@ -10,16 +10,14 @@ const AppRoute = ({
   Layout = (Layout === undefined) ? props => (<>{props.children}</>) : Layout;
   return (
     <Route
-      {...rest}
-      render={(props) => {
-        return(
-        <CFade className="h-100">    
-          <Layout {...props}>
-          </Layout>
-        </CFade>
-      )
-      }} >
-    </Route>
+    {...rest}
+    render={props => (
+      <CFade className="h-100">
+        <Layout>
+          <Component {...props} />
+        </Layout>
+      </CFade>
+    )} />
   );
 }
 

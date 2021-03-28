@@ -7,21 +7,18 @@ import {useData} from "./../hook/useData";
 
 const Sub = ({ children}) => {
     const classes = classNames(
-        "overflew-hidden",
-        "h-100"
+        "c-main",
+        "overflow-hidden"
     );
-    const {getData} = useData();
-    const {pageId} = useParams();
-    const {title__main,title__sub,component:Component,etc:Etc} = getData(pageId);
   return(
     <>
-        <CContainer fluid className={classes} >
-            <CCard className="h-100 mb-0">
-                <CRow className="h-100 d-flex no-gutters">
-                    <Component></Component>
-                </CRow>
-            </CCard>
-        </CContainer>   
+    <main className={classes}>
+        <CContainer fluid className="h-100" >
+            <CCard className="h-100 overflow-auto">
+                {children}   
+            </CCard>            
+        </CContainer>  
+    </main>     
     </>
 )}
 

@@ -13,6 +13,7 @@ const TheLayout = () => {
       <TheSidebar/>
       <div className="c-wrapper">
         <div className="c-body">
+          
           <TheContent/>
         </div>
       </div>

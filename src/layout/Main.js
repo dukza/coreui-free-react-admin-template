@@ -6,14 +6,16 @@ import {CContainer, CRow, CCol, CCard, CCardBody} from '@coreui/react'
 
 const Main = ({ children }) => {
     const classes = classNames(
-        "overflow-auto",
-        "vh-100"
+        "c-main",
+        "overflow-auto"
     );
 return(
     <>
-    <CContainer fluid className={classes}>
-        {children}
-    </CContainer>
+    <main className={classes}>
+        <CContainer fluid >
+                {children} 
+        </CContainer>        
+    </main>
     </>
 )}
 
